@@ -2,39 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Game Corner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="homepage.css">
 </head>
 <body>
-  <div class="homepage">
+  <div class="container">
+    <!-- Header -->
     <header class="navbar">
-      <div class="logo">Game<br>Corner</div>
+      <div class="logo">
+        <span>Game</span><br>
+        <span>Corner</span>
+      </div>
       <nav class="nav-links">
         <a href="#">Schedule</a>
         <a href="#">Contact Us</a>
       </nav>
       <div class="profile-icon">
-        <img src="group0.svg" alt="Profile">
+        <i class="fas fa-user-circle"></i>
       </div>
     </header>
 
+    <!-- Announcement Section -->
     <section class="announcement-section">
-      <button class="arrow left">
-        <img src="prime-angle-left0.svg" alt="Left Arrow">
-      </button>
-      <div class="announcement">Announcement</div>
-      <button class="arrow right">
-        <img src="prime-angle-right0.svg" alt="Right Arrow">
-      </button>
+      <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
+      <div class="announcement-box">Announcement</div>
+      <button class="arrow-btn"><i class="fas fa-arrow-right"></i></button>
     </section>
 
+    <!-- Device Selection -->
     <section class="device-selection">
-      <p class="select-text">SELECT THE DEVICE YOU WANT TO PLAY</p>
-      <div class="devices">
-        <img src="xbox-logo-10.png" alt="Xbox">
-        <img src="mi-computer0.svg" alt="PC">
-        <img src="playstation-logotype-10.png" alt="PlayStation">
+      <p class="selection-text">SELECT THE DEVICE YOU WANT TO PLAY</p>
+      <div class="device-icons">
+        <i class="fab fa-xbox"></i>
+        <i class="fas fa-desktop"></i>
+        <i class="fab fa-playstation"></i>
       </div>
     </section>
   </div>

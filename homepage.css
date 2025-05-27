@@ -1,87 +1,89 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #1a1a1a;
-  font-family: Arial, sans-serif;
-  color: black;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfdfd;
 }
 
-.homepage {
-  background-color: white;
-  max-width: 600px;
-  margin: 20px auto;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 8px;
 }
 
+/* Header */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.2;
 }
 
 .nav-links a {
   margin: 0 10px;
-  color: black;
   text-decoration: none;
+  color: #000;
   font-size: 14px;
 }
 
-.profile-icon img {
-  width: 24px;
-  height: 24px;
+.profile-icon i {
+  font-size: 24px;
+  color: #000;
 }
 
+/* Announcement */
 .announcement-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #d9d9d9;
-  padding: 15px;
-  margin-bottom: 30px;
-  border-radius: 4px;
+  justify-content: center;
+  margin: 40px 0 20px;
 }
 
-.announcement {
-  font-weight: bold;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.arrow {
+.arrow-btn {
   background: none;
   border: none;
+  font-size: 24px;
   cursor: pointer;
+  color: #333;
 }
 
-.arrow img {
-  width: 20px;
-  height: 20px;
+.announcement-box {
+  background-color: #ddd;
+  padding: 20px 60px;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
 }
 
+/* Device Section */
 .device-selection {
   text-align: center;
+  margin-top: 40px;
 }
 
-.select-text {
+.selection-text {
+  font-weight: bold;
   margin-bottom: 20px;
   font-size: 14px;
-  font-weight: 500;
 }
 
-.devices img {
-  width: 50px;
-  margin: 0 15px;
-  vertical-align: middle;
+.device-icons i {
+  font-size: 40px;
+  margin: 0 20px;
+  cursor: pointer;
+  color: #000;
+  transition: transform 0.2s ease;
+}
+
+.device-icons i:hover {
+  transform: scale(1.2);
+  color: #555;
 }
