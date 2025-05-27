@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  font-family: Arial, sans-serif;
+  color: black;
+}
+
+.homepage {
+  background-color: white;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.nav-links a {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profile-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.announcement-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+
+.announcement {
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.arrow img {
+  width: 20px;
+  height: 20px;
+}
+
+.device-selection {
+  text-align: center;
+}
+
+.select-text {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.devices img {
+  width: 50px;
+  margin: 0 15px;
+  vertical-align: middle;
+}
