@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Game Corner</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="homepage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="homepage.css">
 </head>
-<body>
-  <div class="container">
-    <!-- Header -->
-    <header class="navbar">
-      <div class="logo">
-        <span>Game</span><br>
-        <span>Corner</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#">Schedule</a>
-        <a href="#">Contact Us</a>
-      </nav>
-      <div class="profile-icon">
-        <i class="fas fa-user-circle"></i>
-      </div>
-    </header>
+<body class="bg-gray-900">
+    <div class="main-layout">
+        <nav class="bottom-nav" id="mainNav">
+            <a href="#" class="nav-item">
+                <img src="logo2.svg" alt="Home Icon" class="nav-icon">
+            </a>
+            <a href="#" class="nav-item">
+                <img src="calendar.svg" alt="Schedule Icon" class="nav-icon">
+                <span>Schedule</span>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="books.svg" alt="Games Icon" class="nav-icon">
+                <span>Games</span>
+            </a>
+            <a href="#" class="nav-item">
+                <img src="profile.svg" alt="Profile Icon" class="nav-icon">
+                <span>Profile</span>
+            </a>
+        </nav>
 
-    <!-- Announcement Section -->
-    <section class="announcement-section">
-      <button class="arrow-btn"><i class="fas fa-arrow-left"></i></button>
-      <div class="announcement-box">Announcement</div>
-      <button class="arrow-btn"><i class="fas fa-arrow-right"></i></button>
-    </section>
+        <div class="container">
+            <header class="header">
+                <div class="header-left">
+                    <img src="logo.svg" alt="Logo" class="header-logo">
+                    <h1 class="header-title">Welcome, <span class="text-orange">Ryan!</span></h1>
+                </div>
+            </header>
 
-    <!-- Device Selection -->
-    <section class="device-selection">
-      <p class="selection-text">SELECT THE DEVICE YOU WANT TO PLAY</p>
-      <div class="device-icons">
-        <i class="fab fa-xbox"></i>
-        <i class="fas fa-desktop"></i>
-        <i class="fab fa-playstation"></i>
-      </div>
-    </section>
-  </div>
+            <section class="announcement-section">
+                <div class="announcement-card-wrapper" id="announcementWrapper">
+                    <div class="announcement-card">
+                        <p>We apologize — the PlayStation controller is currently under maintenance. You may experience limited gameplay. Thank you for your understanding.</p>
+                        <p class="date">19:30 19-09-2021</p>
+                    </div>
+                    <div class="announcement-card">
+                        <p>Important Notice: Server maintenance scheduled for 2 AM tomorrow. Expect brief downtime. We appreciate your patience!</p>
+                        <p class="date">22:00 20-09-2021</p>
+                    </div>
+                    <div class="announcement-card">
+                        <p>New game update available! Download now to enjoy new features and bug fixes. Happy gaming!</p>
+                        <p class="date">10:00 21-09-2021</p>
+                    </div>
+                </div>
+                <button class="announcement-nav-button left" id="prevAnnouncementBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="announcement-nav-button right" id="nextAnnouncementBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </section>
+
+            <section class="device-selection-section">
+                <h2 class="device-selection-title">Which device you're going to use today?</h2>
+                <div class="device-grid">
+                    <div class="device-card">
+                        <img src="xbox.png" alt="Xbox Icon">
+                        <span>Xbox</span>
+                    </div>
+                    <div class="device-card">
+                        <img src="ps.png" alt="Playstation 5 Icon">
+                        <span>Playstation 5</span>
+                    </div>
+                    <div class="device-card">
+                        <img src="pc.svg" alt="PC Icon">
+                        <span>PC</span>
+                    </div>
+                    <div class="device-card">
+                        <img src="dance.png" alt="Dance Machine Icon">
+                        <span>Dance Machine</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="homepage.js"></script>
 </body>
 </html>
