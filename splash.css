@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #00003f;
+  height: 100vh;      /* full viewport height */
+  display: flex;
+  justify-content: center; /* center horizontally */
+
+}
+
+#main-content {
+  display: none;
+  padding: 2rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+#splash-screen {
+  display: flex;
+  align-items: center;      /* center vertically within splash */
+  gap: 1rem;                /* small gap between left and right */
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+#splash-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.left-corner {
+  display: flex;
+  flex-direction: column;
+  color: #ff9c37;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 1;
+}
+
+.right-group {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  margin: 0;
+  line-height: 49px;
+  font-size: 48px;
+  font-weight: 800;
+  font-family: sans-serif;
+  text-align: left;
+}
+
+.game {
+  color: white;
+}
+
+.corner {
+  margin-left: 1.5rem;
+  color: #ff9c37;
+}
+
+.icon-park-game {
+  width: 100px;
+  height: 100px;
+}
+
+.logo{
+  margin: 1rem;
+  display: flex;
+  justify-content: center;      /* center vertically within splash */
+  gap: 1rem;                /* small gap between left and right */
+}
+
+.logo .icon-park-game{
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1{
+  line-height: 25px;
+  font-size: 24px;
+}
+
+.logo .corner{
+  margin-left:.8rem;
+}
+
+.text-frame {
+  margin: 1em;
+  z-index: 2;
+  max-width: 30rem;
+}
+
+.text-frame input{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background: #fdfdfd;
+  border-radius: 15px;
+  align-self: stretch;
+  flex-shrink: 0;
+  position: relative;
+  width: 90%;
+  padding: .8rem;
+  height: 1.5rem;
+  font-size: 1rem;
+}
+
+.forgot-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 1.5rem;
+}
+
+.forgot {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+.login{
+    margin-top: 1rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ff9c37;
+    border-radius: 15px;
+    padding: .5rem .5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    z-index: 2;
+    color: #000000;
+    text-align: center;
+    font-family: "Roboto-ExtraBold", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+}
