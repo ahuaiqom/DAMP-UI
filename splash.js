@@ -1,3 +1,7 @@
+function goToHomepage() {
+  window.location.href = "homepage.html";
+}
+
 window.addEventListener("load", () => {
     const splash = document.getElementById("splash-screen");
     const main = document.getElementById("main-content");
