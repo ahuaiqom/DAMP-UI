@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #00003f;
+  color: white;
+  min-height: 100vh;
+}
+
+/* DESKTOP NAVBAR */
+.desktop-navbar {
+  display: none;
+  justify-content: start;
+  gap: 2rem;
+  padding: 1.2rem 2rem;
+  background-color: #ff9c37;
+}
+
+.desktop-navbar a {
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* PROFILE LAYOUT */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 6rem;
+}
+
+.top-section {
+  background-color: #ff9c37;
+  width: 100%;
+  padding: 3rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.profile-image-wrapper {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 3px solid white;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.top-section h2 {
+  font-size: 1.1rem;
+  color: black;
+}
+
+/* FORM SECTION */
+.form-section {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem 3rem 0.9rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  color: black;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  cursor: pointer;
+}
+
+.submit-button {
+  padding: 0.9rem;
+  background-color: #ff9c37;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* BOTTOM NAVBAR (MOBILE) */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+.nav-icon {
+  width: 24px;
+  opacity: 0.6;
+}
+
+.active-icon {
+  opacity: 1;
+}
+.nav-icon.active-icon {
+  filter: brightness(0) saturate(100%) invert(7%) sepia(97%) saturate(2856%) hue-rotate(205deg) brightness(94%) contrast(115%);
+}
+
+/* DESKTOP RESPONSIVE */
+@media (min-width: 768px) {
+  .desktop-navbar {
+    display: flex;
+  }
+
+  .bottom-nav {
+    display: none;
+  }
+
+  .top-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-container {
+    padding-bottom: 2rem;
+  }
+
+  .submit-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .form-section {
+    align-items: center;
+  }
+}
