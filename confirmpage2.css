@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #00003f;
+  color: white;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* NAVBAR DESKTOP */
+.desktop-navbar {
+  display: none;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00003f;
+}
+
+.desktop-left,
+.desktop-right {
+  display: flex;
+  align-items: center;
+}
+
+.desktop-navbar a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-size: 1rem;
+}
+
+.desktop-next {
+  background: #ff9c37;
+  padding: 0.6rem 1.5rem;
+  border-radius: 12px;
+  color: black;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* LOGO */
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo {
+  width: 60px;
+  background-color: #ff9100;
+  border-radius: 12px;
+  padding: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.title-section {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 0.9rem;
+}
+
+/* CARD */
+.card {
+  background-color: #1a1a8b;
+  border-radius: 16px;
+  padding: 2rem 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.check-icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.thanks-text {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #ff9100;
+  font-weight: 500;
+}
+
+/* RETURN BUTTON MOBILE */
+.next-button {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 500px;
+  background: #ff9c37;
+  padding: 0.85rem;
+  border-radius: 20px;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESKTOP */
+@media (min-width: 768px) {
+  .desktop-navbar {
+    display: flex;
+  }
+
+  .next-button {
+    display: none;
+  }
+
+  .card {
+    padding: 4rem 6rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .check-icon {
+    width: 70px;
+  }
+
+  .card h2 {
+    font-size: 2rem;
+  }
+
+  .thanks-text {
+    font-size: 1.2rem;
+  }
+
+  .note {
+    font-size: 1rem;
+  }
+
+  .main-layout {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
