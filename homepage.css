@@ -1,409 +1,481 @@
- body {
-            font-family: 'Inter', sans-serif;
-            background-color: #1a202c; /* Dark background */
-            color: #e2e8f0; /* Light text color */
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Align to top for mobile */
-            min-height: 100vh;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        /* Main layout wrapper - Mobile styles (default) */
-        .main-layout {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 100vh; /* Ensure full height on mobile */
-            background-color: #00003f; /* Background for the mobile container */
-            border-radius: 0; /* No border-radius on mobile */
-            box-shadow: none; /* No shadow on mobile */
-            overflow: hidden;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a202c; /* Dark background */
+    color: #e2e8f0; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for mobile */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Main content container - Mobile styles (default) */
-        .container {
-            flex-grow: 1; /* Allow content to grow and push nav down on mobile */
-            padding: 1rem; /* Mobile padding */
-            max-width: 400px; /* Mobile max width */
-            width: 100%;
-            margin: 0 auto; /* Center on mobile if max-width is applied */
-            background-color: transparent; /* No extra background, main-layout handles it */
-            box-shadow: none;
-            display: flex;
-            flex-direction: column;
-        }
+/* Main layout wrapper - Mobile styles (default) */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* Ensure full height on mobile */
+    background-color: #00003f; /* Background for the mobile container */
+    border-radius: 0; /* No border-radius on mobile */
+    box-shadow: none; /* No shadow on mobile */
+    overflow: hidden;
+}
 
-        /* Header Section */
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem; /* Mobile margin */
-        }
+/* Main content container - Mobile styles (default) */
+.container {
+    flex-grow: 1; /* Allow content to grow and push nav down on mobile */
+    max-width: 400px; /* Mobile max width */
+    width: 100%;
+    margin: 0 auto; /* Center on mobile if max-width is applied */
+    background-color: transparent; /* No extra background, main-layout handles it */
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
 
-        .header-left {
-            display: flex;
-            align-items: center;
-        }
+/* Header Section (Mobile) */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content on mobile */
+    margin-bottom: 1.5rem; /* Mobile margin */
+    padding: 0;
+    margin-top: 1rem;
+}
 
-        .header-logo {
-            width: 40px; /* Mobile size */
-            height: 40px; /* Mobile size */
-            border-radius: 9999px;
-            margin-right: 0.75rem;
-        }
+.header-left {
+    display: flex; /* Ensure header-left is visible on mobile */
+    align-items: center;
+}
 
-        .header-title {
-            font-size: 1.25rem; /* Mobile size */
-            font-weight: 600;
-            color: #ffffff;
-        }
+.header-logo {
+    width: 40px; /* Mobile size */
+    height: 40px; /* Mobile size */
+    border-radius: 9999px;
+    margin-right: 0.75rem;
+    display: block; /* Ensure logo is visible on mobile */
+}
 
-        .header-title span {
-            color: #ff9c37;
-        }
+.header-title {
+    font-size: 1.25rem; /* Mobile size */
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 0; /* No extra margin on mobile */
+    display: block; /* Ensure title is visible on mobile */
+}
 
-        .header-settings-icon {
-            color: #9ca3af;
-            font-size: 1.5rem; /* Mobile size */
-        }
+.header-title span {
+    color: #ff9c37;
+}
 
-        /* Announcement Section */
-        .announcement-section {
-            margin-bottom: 2rem;
-            overflow: hidden;
-            border-radius: 0.75rem;
-            position: relative;
-            padding: 0 2.5rem; /* Mobile padding for buttons */
-        }
+.header-settings-icon {
+    display: none; /* Hide Font Awesome user icon in the mobile header as it's in the navbar */
+}
 
-        .announcement-card-wrapper {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: fit-content; /* Allow wrapper to expand to content */
-        }
+/* Top Navigation (Desktop) - Hidden on Mobile */
+.top-nav {
+    display: none; /* Hidden by default (mobile) */
+}
 
-        .announcement-card {
-            flex-shrink: 0;
-            width: 350px; /* Fixed width for each card */
-            padding: 1.5rem;
-            background-color: #ff9c37;
-            color: #2d3748;
-            border-radius: 1rem;
-            box-sizing: border-box;
-            margin-right: 1rem; /* Gap between cards */
-        }
+/* Announcement Section */
+.announcement-section {
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    position: relative;
+    padding: 0 2.5rem; /* Mobile padding for buttons */
+}
 
-        .announcement-card:last-child {
-            margin-right: 0;
-        }
+.announcement-card-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: fit-content; /* Allow wrapper to expand to content */
+}
 
-        .announcement-card p {
-            font-size: 0.875rem; /* Mobile size */
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
+.announcement-card {
+    flex-shrink: 0;
+    width: 350px; /* Fixed width for each card */
+    padding: 1.5rem;
+    background-color: #ff9c37;
+    color: #2d3748;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    margin-right: 1rem; /* Gap between cards */
+    text-align: center; /* Center text in announcement card */
+}
 
-        .announcement-card .date {
-            font-size: 0.75rem; /* Mobile size */
-            color: #4a5568;
-        }
+.announcement-card:last-child {
+    margin-right: 0;
+}
 
-        /* Navigation Buttons for Announcements */
-        .announcement-nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 0.5rem 0.75rem; /* Mobile padding */
-            border-radius: 0.5rem;
-            cursor: pointer;
-            font-size: 1.25rem; /* Mobile size */
-            z-index: 10;
-            transition: background-color 0.3s ease;
-        }
+.announcement-card p {
+    font-size: 0.875rem; /* Mobile size */
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
 
-        .announcement-nav-button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
+.announcement-card .date {
+    font-size: 0.75rem; /* Mobile size */
+    color: #4a5568;
+}
 
-        .announcement-nav-button.left {
-            left: 0.5rem;
-        }
+/* Navigation Buttons for Announcements (Mobile) */
+.announcement-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.75rem; /* Mobile padding */
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.25rem; /* Mobile size */
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    display: block; /* Ensure buttons are visible on mobile */
+}
 
-        .announcement-nav-button.right {
-            right: 0.5rem;
-        }
+.announcement-nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
-        /* Device Selection Section - Mobile styles (default) */
-        .device-selection-section {
-            margin-bottom: 2rem;
-            text-align: center;
-            padding: 0 1rem; /* Added padding to ensure scrollable area is visible */
-        }
+.announcement-nav-button.left {
+    left: 0.5rem;
+}
 
-        .device-selection-title {
-            font-size: 1.5rem; /* Mobile size */
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 1.5rem;
-        }
+.announcement-nav-button.right {
+    right: 0.5rem;
+}
 
-        /* Device Grid - Responsive Wrapping (Mobile) */
-        .device-grid {
-            display: grid; /* Use grid for responsive wrapping on mobile */
-            /* Mobile: 2 columns, or 1 if very narrow. minmax(140px, 1fr) ensures at least 140px per card */
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 1rem; /* Mobile gap */
-            overflow-x: hidden; /* Ensure no horizontal scrollbar on mobile by default */
-        }
+/* Device Selection Section (Mobile) */
+.device-selection-section {
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem; /* Added padding to ensure scrollable area is visible */
+}
 
-        .device-card {
-            background-color: #ff9c37;
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.2s ease-in-out;
-        }
+.device-selection-title {
+    font-size: 1.5rem; /* Mobile size */
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    display: block; /* Ensure title is visible on mobile */
+}
 
-        .device-card:hover {
-            transform: scale(1.05);
-        }
+/* Device Grid - Responsive Wrapping (Mobile) */
+.device-grid {
+    display: grid; /* Use grid for responsive wrapping on mobile */
+    /* Mobile: 2 columns, or 1 if very narrow. minmax(140px, 1fr) ensures at least 140px per card */
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem; /* Mobile gap */
+    overflow-x: hidden; /* Ensure no horizontal scrollbar on mobile by default */
+    margin: 0 auto; /* Center the grid on mobile */
+    align-items: center;
+}
 
-        .device-card img {
-            width: 80px; /* Mobile size */
-            height: 80px; /* Mobile size */
-            margin-bottom: 0.75rem;
-        }
+.device-card {
+    background-color: #ff9c37;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease-in-out;
+}
 
-        .device-card span {
-            font-size: 1rem; /* Mobile size */
-            font-weight: 500;
-            color: #ffffff;
-        }
+.device-card:hover {
+    transform: scale(1.05);
+}
 
-        /* Bottom Navigation Bar (Mobile) - Mobile styles (default) */
-        .bottom-nav {
-            margin-top: auto; /* Push to bottom on mobile */
-            background-color: #ffffff;
-            padding: 0.75rem; /* Mobile padding */
-            border-radius: 1rem 1rem 0 0; /* Rounded top corners */
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
-            position: fixed; /* Fixed at bottom for mobile */
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-        }
+.device-card img {
+    width: 80px; /* Mobile size */
+    height: 80px; /* Mobile size */
+    margin-bottom: 0.75rem;
+}
 
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            color: #9ca3af;
-            transition: color 150ms ease-in-out, transform 0.2s ease-in-out;
-            padding: 0.25rem 0.5rem; /* Smaller padding for mobile nav items */
-            border-radius: 0.5rem;
-        }
+.device-card span {
+    font-size: 1rem; /* Mobile size */
+    font-weight: 500;
+    color: #ffffff;
+}
 
-        .nav-item:first-child {
-            color: #fbbf24;
-        }
+/* Bottom Navigation Bar (Mobile) - visible on mobile, hidden on desktop */
+.bottom-nav {
+    margin-top: auto; /* Push to bottom on mobile */
+    background-color: #ffffff;
+    padding: 0.75rem; /* Mobile padding */
+    border-radius: 1rem 1rem 0 0; /* Rounded top corners */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    position: fixed; /* Fixed at bottom for mobile */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
 
-        .nav-item:hover {
-            color: #fbbf24;
-            transform: translateY(-2px);
-        }
+.sidebar-logo {
+    display: none; /* Hidden on mobile */
+}
 
-        .nav-item i {
-            font-size: 1.75rem; /* Mobile size */
-            margin-bottom: 0.25rem;
-        }
-        /* Style for custom image icons in navigation */
-        .nav-item img {
-            width: 28px; /* Adjust size as needed for mobile */
-            height: 28px; /* Adjust size as needed for mobile */
-            margin-bottom: 0.25rem; /* Same as Font Awesome margin */
-            filter: grayscale(100%) brightness(150%); /* Default gray state */
-            transition: filter 150ms ease-in-out;
-        }
-        .nav-item:first-child img {
-            filter: none; /* Active item no filter */
-        }
-        .nav-item:hover img {
-            filter: none; /* Hover state no filter */
-        }
+.nav-item {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
+    align-items: center;
+    color: #9ca3af;
+    transition: color 150ms ease-in-out, transform 0.2s ease-in-out;
+    padding: 0.25rem 0.5rem; /* Smaller padding for mobile nav items */
+    border-radius: 0.5rem;
+}
 
+.nav-item:first-child {
+    color: #ff9c37; /* Active color for homepage */
+}
 
-        .nav-item span {
-            font-size: 0.75rem; /* Mobile size */
-        }
+.nav-item:hover {
+    color: #ff9c37;
+    transform: translateY(-2px);
+}
 
-        /* Desktop Styles - Applied at min-width: 992px */
-        @media (min-width: 992px) {
-            body {
-                align-items: center; /* Center content vertically on desktop */
-            }
+.nav-item i {
+    display: none; /* Hide Font Awesome icon, use images instead for consistency */
+}
 
-            .main-layout {
-                display: grid;
-                grid-template-columns: 180px 1fr; /* Sidebar width + content area */
-                width: 100%; /* Adjust width for desktop */
-                min-height: 80vh; /* Adjust min-height for desktop view */
-                border-radius: 1.5rem; /* Rounded corners for the whole layout */
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            }
+/* Style for custom image icons in navigation (Mobile) */
+.nav-item img {
+    width: 28px; /* Adjust size as needed for mobile */
+    height: 28px; /* Adjust size as needed for mobile */
+    margin-bottom: 0.25rem; /* Same as Font Awesome margin */
+    filter: grayscale(100%) brightness(150%); /* Default gray state */
+    transition: filter 150ms ease-in-out;
+}
 
-            .container {
-                max-width: none; /* Remove mobile max-width */
-                width: auto; /* Let grid handle width */
-                margin: 0; /* Remove mobile auto margin */
-                padding: 2rem; /* Desktop padding */
-                background-color: #00003f; /* Apply background here for content area */
-                border-radius: 0 1.5rem 1.5rem 0; /* Rounded right corners */
-                min-height: 80vh; /* Ensure content area fills height */
-            }
+.nav-item:first-child img {
+    filter: none; /* Active item no filter */
+}
 
-            .header {
-                margin-bottom: 2rem; /* Desktop margin */
-            }
+.nav-item:hover img {
+    filter: none; /* Hover state no filter */
+}
 
-            .header-logo {
-                width: 50px; /* Desktop size */
-                height: 50px; /* Desktop size */
-                margin-right: 1rem;
-            }
+.nav-item span {
+    font-size: 0.75rem; /* Mobile size */
+    display: none; /* Hide text on mobile nav items */
+}
 
-            .header-title {
-                font-size: 1.5rem; /* Desktop size */
-            }
+/* Desktop Styles - Applied at min-width: 992px */
+@media (min-width: 992px) {
+    body {
+        align-items: flex-start; /* Align content to top for full page layout */
+        justify-content: flex-start;
+    }
 
-            .header-settings-icon {
-                font-size: 2rem; /* Desktop size */
-            }
+    .main-layout {
+        display: flex; /* Use flexbox for desktop layout */
+        flex-direction: column; /* Stack header and content vertically */
+        width: 100%; /* Take full width */
+        min-height: 100vh; /* Take full viewport height */
+        border-radius: 0; /* Remove rounded corners for full page */
+        box-shadow: none; /* Remove shadow */
+        background-color: #00003f; /* Full background for desktop */
+    }
 
-            .announcement-section {
-                padding: 0 3rem; /* Desktop padding for buttons */
-            }
+    .container {
+        max-width: 100%; /* Max width for content within the main layout */
+        width: 100%;
+        margin: 0 auto; /* Center the content */
+        background-color: transparent; /* No extra background, main-layout handles it */
+        border-radius: 0; /* No rounded corners */
+        min-height: auto;
+        display: block; /* Revert to block layout for content flow */
+    }
 
-            .announcement-card p {
-                font-size: 1rem; /* Desktop size */
-                margin-bottom: 0.75rem;
-            }
+    /* Header Section (Desktop) */
+    .header {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Space between top-nav-left and top-nav-right */
+        padding: 1rem 2rem; /* Padding for the top nav bar */
+        background-color: #1a202c; /* Darker background for the top nav */
+        margin-bottom: 2rem; /* Space below the header */
+        position: static; /* No relative positioning needed */
+    }
 
-            .announcement-card .date {
-                font-size: 0.875rem; /* Desktop size */
-            }
+    .header-left {
+        display: none; /* Hide mobile header elements on desktop */
+    }
 
-            .announcement-nav-button {
-                padding: 0.75rem 1rem; /* Desktop padding */
-                font-size: 1.5rem; /* Desktop size */
-            }
+    .header-title {
+        display: none; /* Hide mobile header elements on desktop */
+    }
 
-            .announcement-nav-button.left {
-                left: 1rem;
-            }
+    .header-settings-icon {
+        display: none; /* Hide mobile header profile icon */
+    }
 
-            .announcement-nav-button.right {
-                right: 1rem;
-            }
+    /* Desktop Top Navigation */
+    .top-nav {
+        display: flex; /* Make top nav visible */
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
 
-            .device-selection-title {
-                font-size: 2rem; /* Desktop size */
-                margin-bottom: 2rem;
-            }
+    .top-nav-left {
+        display: flex;
+        align-items: center;
+        gap: 2rem; /* Space between logo and nav items */
+    }
 
-            .device-grid {
-                /* Changed to flexbox for horizontal scrolling on desktop */
-                display: flex;
-                flex-wrap: nowrap; /* Force items into a single line */
-                overflow-x: auto; /* Enable horizontal scrolling */
-                -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-                padding-bottom: 1rem; /* Space for scrollbar */
-                gap: 1.5rem; /* Desktop gap */
-                justify-content: flex-start; /* Align items to the start */
-            }
+    .top-nav-logo {
+        width: 40px; /* Size for desktop top nav logo */
+        height: 40px;
+        border-radius: 9999px; /* Make it circular */
+    }
 
-            /* Custom scrollbar styles for desktop device grid */
-            .device-grid::-webkit-scrollbar {
-                height: 8px; /* Height of the horizontal scrollbar */
-            }
+    .top-nav-item {
+        color: #e2e8f0; /* Light text color */
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: background-color 0.2s ease, color 0.2s ease;
+    }
 
-            .device-grid::-webkit-scrollbar-track {
-                background: #2d3748; /* Color of the track */
-                border-radius: 10px;
-            }
+    .top-nav-item.active {
+        background-color: #ff9c37; /* Active item background */
+        color: #1a202c; /* Dark text for active item */
+    }
 
-            .device-grid::-webkit-scrollbar-thumb {
-                background: #4a5568; /* Color of the scroll thumb */
-                border-radius: 10px;
-            }
+    .top-nav-item:hover:not(.active) {
+        background-color: rgba(255, 156, 55, 0.2); /* Light orange hover for inactive */
+    }
 
-            .device-grid::-webkit-scrollbar-thumb:hover {
-                background: #5a6578; /* Color on hover */
-            }
+    .top-nav-right {
+        display: flex;
+        align-items: center;
+    }
 
-            .device-card {
-                flex-shrink: 0; /* Prevent shrinking */
-                min-width: 180px; /* Minimum width for desktop cards, will scroll if more needed */
-            }
+    .top-nav-profile-icon {
+        width: 32px; /* Size for profile icon in top nav */
+        height: 32px;
+        filter: brightness(0) invert(1); /* Make it white */
+    }
 
-            .device-card img {
-                width: 100px; /* Desktop size */
-                height: 100px; /* Desktop size */
-                margin-bottom: 1rem;
-            }
+    /* Announcement Section (Desktop) */
+    .announcement-section {
+        padding: 0; /* Remove padding */
+        margin-bottom: 2rem;
+        display: flex; /* Display cards side-by-side */
+        gap: 1rem; /* Gap between announcement cards */
+        justify-content: center; /* Center the announcement cards */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+        flex-wrap: nowrap; /* Ensure cards stay in a single line */
+        align-items: center;
+        position: relative;
+    }
 
-            .device-card span {
-                font-size: 1.25rem; /* Desktop size */
-            }
+    .announcement-card-wrapper {
+        display: flex;
+        flex-wrap: nowrap; /* Keep cards in one line */
+        width: 100%; /* Allow wrapper to take full width */
+        gap: 1rem; /* Gap between cards in the wrapper */
+    }
 
-            /* Side Navigation Bar (Desktop) */
-            .bottom-nav {
-                position: static; /* Remove fixed positioning */
-                width: auto; /* Let grid handle width */
-                height: 100%; /* Take full height of grid cell */
-                border-radius: 1.5rem 0 0 1.5rem; /* Rounded left corners for side nav */
-                background-color: #2d3748; /* Same background as container for seamless look */
-                padding: 2rem 1rem; /* Adjust padding for vertical nav */
-                display: flex;
-                flex-direction: column; /* Stack items vertically */
-                justify-content: flex-start; /* Align items to top */
-                align-items: flex-start; /* Align items to left */
-                box-shadow: none; /* Remove shadow */
-            }
+    .announcement-card {
+        flex-shrink: 0; /* Prevent shrinking */
+        width: calc(50% - 0.5rem); /* Two cards with a gap */
+        padding: 2rem;
+        border-radius: 0.75rem;
+        margin-right: 0; /* Handled by gap on wrapper */
+        text-align: left; /* Align text to left */
+    }
 
-            .nav-item {
-                flex-direction: row; /* Icons and text side-by-side */
-                justify-content: flex-start;
-                width: 100%;
-                padding: 0.75rem 1rem; /* Add padding for clickable area */
-                margin-bottom: 0.5rem; /* Space between nav items */
-                border-radius: 0.5rem;
-            }
+    .announcement-card p {
+        font-size: 1.125rem; /* Desktop size */
+        margin-bottom: 1rem;
+    }
 
-            .nav-item i {
-                display: none; /* Hide Font Awesome icon on desktop */
-            }
-            .nav-item img {
-                width: 32px; /* Adjust size for desktop */
-                height: 32px; /* Adjust size for desktop */
-                margin-right: 0.75rem; /* Space between icon and text */
-                margin-bottom: 0; /* Remove bottom margin */
-            }
+    .announcement-card .date {
+        font-size: 0.875rem; /* Desktop size */
+    }
 
-            .nav-item span {
-                font-size: 1rem; /* Desktop size */
-            }
-        }
+    .announcement-nav-button {
+        display: none; /* Hide navigation buttons on desktop */
+    }
+
+    /* Device Selection Section (Desktop) */
+    .device-selection-section {
+        margin-bottom: 0; /* Adjust margin */
+        text-align: left; /* Align title to left */
+        padding: 0; /* Remove padding */
+    }
+
+    .device-selection-title {
+        display: none; /* Hide the title on desktop */
+    }
+
+    .device-grid {
+        display: flex; /* Use flexbox for vertical stacking */
+        flex-direction: column; /* Stack items vertically */
+        gap: 1rem; /* Gap between vertical buttons */
+        overflow-x: hidden; /* No horizontal scroll on desktop */
+        padding-bottom: 0; /* Remove scrollbar padding */
+        margin: 0 auto; /* Center the block of buttons */
+    }
+
+    .device-grid::-webkit-scrollbar {
+        display: none; /* Hide scrollbar on desktop */
+    }
+
+    .device-card {
+        background-color: #ff9c37;
+        padding: 1rem 1.5rem; /* Adjust padding for button-like appearance */
+        border-radius: 0.5rem; /* Slightly less rounded corners */
+        flex-direction: row; /* Icon and text side-by-side */
+        justify-content: flex-start; /* Align icon and text to start */
+        align-items: center;
+        min-width: auto; /* Remove min-width */
+        max-width: 300px; /* Set a max-width for the buttons */
+        width: 100%; /* Take full width of its container */
+        box-shadow: none; /* Remove shadow for a flatter look */
+    }
+
+    .device-card:hover {
+        transform: none; /* Remove scale effect on hover */
+        background-color: #e68a2e; /* Slightly darker orange on hover */
+    }
+
+    .device-card img {
+        width: 32px; /* Smaller icons for buttons */
+        height: 32px;
+        margin-bottom: 0;
+        margin-right: 1rem;
+        filter: brightness(0) invert(1); /* Make images white */
+    }
+
+    .device-card span {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #ffffff;
+    }
+
+    /* Mobile Bottom Navigation (Hidden on Desktop) */
+    .bottom-nav {
+        display: none; /* Hide bottom nav on desktop */
+    }
+
+    /* This was for a previous sidebar logo, no longer needed with top nav */
+    .sidebar-logo {
+        display: none;
+    }
+}

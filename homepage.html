@@ -10,12 +10,14 @@
 </head>
 <body class="bg-gray-900">
     <div class="main-layout">
-        <nav class="bottom-nav" id="mainNav">
+        <!-- Mobile Bottom Navigation (fixed at bottom on mobile, hidden on desktop) -->
+        <nav class="bottom-nav" id="mainNavMobile">
             <a href="#" class="nav-item">
                 <img src="logo2.svg" alt="Home Icon" class="nav-icon">
             </a>
             <a href="#" class="nav-item">
-                <img src="calendar.svg" alt="Schedule Icon" class="nav-icon">            </a>
+                <img src="calendar.svg" alt="Schedule Icon" class="nav-icon">
+            </a>
             <a href="#" class="nav-item">
                 <img src="books.svg" alt="Games Icon" class="nav-icon">
             </a>
@@ -26,10 +28,30 @@
 
         <div class="container">
             <header class="header">
+                <!-- Mobile Header Content - visible on mobile, hidden on desktop -->
                 <div class="header-left">
                     <img src="logo.svg" alt="Logo" class="header-logo">
                     <h1 class="header-title">Welcome, <span class="text-orange">Ryan!</span></h1>
                 </div>
+                <!-- This icon is for mobile header only, hidden on desktop -->
+                <div class="header-settings-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+
+                <!-- Desktop Top Navigation - visible on desktop, hidden on mobile -->
+                <nav class="top-nav" id="mainNavDesktop">
+                    <div class="top-nav-left">
+                        <img src="logo.svg" alt="App Logo" class="top-nav-logo">
+                        <a href="#" class="top-nav-item active">Homepage</a>
+                        <a href="#" class="top-nav-item">Schedule</a>
+                        <a href="#" class="top-nav-item">Library</a>
+                    </div>
+                    <div class="top-nav-right">
+                        <a href="#" class="top-nav-item">
+                            <img src="profile.svg" alt="Profile Icon" class="top-nav-profile-icon">
+                        </a>
+                    </div>
+                </nav>
             </header>
 
             <section class="announcement-section">
